@@ -6,6 +6,15 @@ pipeline {
     }
 
     stages {
+         stage('Checkout') {
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+                        git url: 'https://github.com/yobadagne/jenkins.git', credentialsId: 'github-token'
+                    }
+                }
+            }
+        }
         stage('Setup') {
             steps {
                 echo 'Setting up...'
