@@ -45,7 +45,7 @@ pipeline {
     post {
         always {
             echo 'Cleaning up...'
-            sh 'rm -f my-go-app'
+            // sh 'rm -f my-go-app'
         }
         success {
             echo 'Pipeline succeeded!'
