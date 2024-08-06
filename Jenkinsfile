@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
-                        git url: 'https://$GITHUB_TOKEN@https://github.com/yobadagne/jenkins.git', credentialsId: 'github-token'
+                        git url: 'https://$GITHUB_TOKEN@github.com/yobadagne/jenkins.git', credentialsId: 'github-token'
                     }
                 }
             }
