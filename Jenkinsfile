@@ -3,7 +3,7 @@ pipeline {
         node {
             label 'docker_basic'
         }
-
+       }
     environment {
         GO_VERSION = '1.19'
     }
